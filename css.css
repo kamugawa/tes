@@ -1,0 +1,419 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: radial-gradient(circle, #000000, #be1300);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+ 
+}
+
+/* Estilo do cabeçalho */
+header {
+    text-align: center;
+    margin-top: 20vh;
+    animation: fadeInDown 2s ease;
+}
+
+header h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: #ff6b6b;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+header p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    animation: fadeIn 3s ease;
+}
+
+/* Botões */
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: #ff6b6b;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e74c3c;
+    transform: translateY(-5px);
+}
+
+/* Galeria */
+/* Galeria */
+#gallery {
+    width: 80%;
+    margin: 50px 0;
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+
+#gallery h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #ff6b6b;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: calc(33.333% - 30px);
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.gallery-item img {
+height: 100%;
+width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+    transform-origin: center center; /* Mantém o zoom centralizado */
+    object-fit: cover; /* Mantém a imagem dentro do contêiner sem distorção */
+position: relative;
+zoom: 200%;
+max-height: 300px;
+
+
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Aplica o efeito de zoom */
+}
+
+/* Seção de Sentimentos */
+#feelings {
+    width: 90%;
+    margin: 50px 0;
+    text-align: center;
+    animation: fadeIn 3s ease;
+    background-color: wheat;
+   
+}
+
+#feelings h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #ff6b6b;
+}
+
+.feelings-container blockquote {
+    font-size: 1.8em;
+    margin: 20px 0;
+    position: relative;
+    animation: fadeIn 4s ease;
+    animation-delay: 1s;
+    line-height: 1.5;
+    color: #ff6b6b;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Rodapé */
+footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+footer span {
+    color: #ff6b6b;
+}
+
+/* Animações */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fixed-background-section  {
+    background-image: url('https://th.bing.com/th/id/R.09bc56726896f2fb5d6af01f8dd5b97d?rik=%2bIDS6OW8DXQzGg&pid=ImgRaw&r=0');
+    background-size: cover; /* Faz a imagem cobrir toda a área da seção */
+    filter: brightness(65%);
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-attachment: fixed; /* Fixa a imagem de fundo */
+    padding: 20px; /* Espaçamento interno */
+    color: white; /* Cor do texto para garantir contraste com o fundo */
+    height: 800px; /* Altura da seção */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+.fixed-background-section p {
+
+    font-size: 2em; /* Aumenta o tamanho da fonte para mais impacto */
+    font-weight: bold; /* Deixa o texto mais forte */
+    text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.8), /* Sombra de texto mais leve */
+        0 0 10px rgba(255, 255, 255, 0.6), /* Sombra de texto mais forte */
+        0 0 15px rgba(255, 255, 255, 0.4), /* Sombra de texto ainda mais forte */
+        0 0 20px rgba(255, 255, 255, 0.2); /* Sombra de texto mais difusa */
+}
+ 
+
+
+
+#play-music {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+
+
+
+
+
+
+/* Mobile - Tela pequena (até 600px) */
+@media (max-width: 600px) {
+    body {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    #gallery {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+
+    #feelings h2 {
+        font-size: 2em;
+    }
+
+    .feelings-container blockquote {
+        font-size: 1.2em;
+    }
+
+    .fixed-background-section {
+        height: 500px;
+    }
+
+    .fixed-background-section p {
+        font-size: 1.5em;
+    }
+}
+
+/* Tablets - Tela média (até 900px) */
+@media (max-width: 900px) {
+    body {
+        font-size: 1em;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 3em;
+    }
+
+    header p {
+        font-size: 1.3em;
+        margin-bottom: 35px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+
+    #gallery {
+        width: 90%;
+        margin: 30px 0;
+    }
+
+    .gallery-item {
+        width: calc(50% - 30px);
+    }
+
+    #feelings h2 {
+        font-size: 2.2em;
+    }
+
+    .feelings-container blockquote {
+        font-size: 1.4em;
+    }
+
+    .fixed-background-section {
+        height: 600px;
+    }
+
+    .fixed-background-section p {
+        font-size: 1.7em;
+    }
+}
+
+/* Desktops pequenos - Tela grande (até 1200px) */
+@media (max-width: 1200px) {
+    header h1 {
+        font-size: 3.5em;
+    }
+
+    header p {
+        font-size: 1.4em;
+        margin-bottom: 40px;
+    }
+
+    .btn {
+        padding: 14px 28px;
+        font-size: 1.2em;
+    }
+
+    #gallery {
+        width: 85%;
+        margin: 40px 0;
+    }
+
+    .gallery-item {
+        width: calc(33.333% - 20px);
+    }
+
+    #feelings h2 {
+        font-size: 2.4em;
+    }
+
+    .feelings-container blockquote {
+        font-size: 1.6em;
+    }
+
+    .fixed-background-section {
+        height: 700px;
+    }
+
+    .fixed-background-section p {
+        font-size: 1.8em;
+    }
+}
+
+/* Desktops grandes (acima de 1200px) */
+@media (min-width: 1200px) {
+    body {
+        font-size: 1.2em;
+    }
+
+    header h1 {
+        font-size: 4em;
+    }
+
+    header p {
+        font-size: 1.5em;
+    }
+
+    .btn {
+        padding: 15px 30px;
+        font-size: 1.3em;
+    }
+
+    #gallery {
+        width: 80%;
+        margin: 50px 0;
+    }
+   
+ 
+    .gallery-item {
+        width: calc(25% - 20px);
+    }
+
+    #feelings h2 {
+        font-size: 2.5em;
+    }
+
+    .feelings-container blockquote {
+        font-size: 1.8em;
+    }
+
+    .fixed-background-section {
+        height: 800px;
+    }
+
+    .fixed-background-section p {
+        font-size: 2em;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+   .gallery-item {
+       zoom: 50%;
+    }}
